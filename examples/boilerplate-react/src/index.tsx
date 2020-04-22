@@ -1,20 +1,21 @@
-import React, { HTMLAttributes } from 'react';
+import React from 'react';
+// import React, { HTMLAttributes } from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { defineCustomElements, JSX as EnhancedJSX } from '@scaleds/components/loader';
+// import { JSX as EnhancedJSX } from '@scaleds/components/loader';
 import App from './App';
 import './index.css';
 
-const { useTheme } = require('@scaleds/components/dist/theme')
+// const { useTheme } = require('@scaleds/components/dist/theme')
+// 
+// useTheme({
+//   shape: {
+//     borderRadius: 24
+//   }
+// })
 
-useTheme({
-  shape: {
-    borderRadius: 24
-  }
-})
-
-type StencilToReact<T> = {
+/* type StencilToReact<T> = {
   [P in keyof T]?: T[P] & Omit<HTMLAttributes<Element>, 'className'> & {
     class?: string;
   };
@@ -24,9 +25,7 @@ declare global {
   export namespace JSX {
     interface IntrinsicElements extends StencilToReact<EnhancedJSX.IntrinsicElements> {}
   }
-}
-
-defineCustomElements(window)
+} */
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -1,18 +1,23 @@
 import React from 'react';
-import { Button, Card, Link, Tag } from '@scaleds/react-wrapper';
+import { ScaleButton, ScaleCard, ScaleLink, ScaleTag } from '@scaleds/react-wrapper';
 import './App.css';
 
 const App: React.FC = () => (
   <div className="App">
     <h1>React App</h1>
-    <h3>Alert</h3>
-      <Link href="http://example.com" target="_blank" variant="success">Success</Link>
-    <h3>Button</h3>
-      <Button variant="primary">Click!</Button>
-    <h3>Card</h3>
-      <Card>A title</Card>
-    <h3>Tag</h3>
-      <Tag dismissable size="small" onClose={(event: any) => console.log(event)}>A title</Tag>
+    <p>Using <code>@scaleds/components</code> via <code>@scaleds/react-wrapper</code>.</p>
+    <div>
+      <ScaleButton variant="primary">Label here</ScaleButton>
+    </div>
+    <div>
+      <ScaleCard>This is the Card component.</ScaleCard>
+    </div>
+    <div>
+      <ScaleLink href="http://example.com" target="_blank" variant="success">Success kind of link</ScaleLink>
+    </div>
+    <div>
+      <ScaleTag dismissable size="small">A tag</ScaleTag>
+    </div>
   </div>
 );
 

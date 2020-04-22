@@ -14,3 +14,7 @@ body {
 hr {
   margin: 3rem 0;
 }
+
+.App > * + * {
+  margin-top: 1.5rem;
+}
